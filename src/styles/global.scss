@@ -1,0 +1,30 @@
+@import './reset.scss';
+@import './fonts.scss';
+@import './header.scss';
+@import './main.scss';
+
+// 변수 설정
+:root {
+    --white : #fff;
+    --black : #000;
+
+    --bg-ligth : #edebf0;
+    --bg-ligth-border : #d8d1da;
+    --bg-dark : #000;
+    --bg-dark-border : #4f29db;
+    --bg-dark-sol : #714aff;
+    --bg-dark-side : #191919;
+    --bg-dark-color : rgb(95 70 252);
+    
+    --font-size : 16px;
+    --font-height : 1.4;
+    --font-color: #fff;
+    --font-main : "NexonLv1Gothic";
+    --font-sub : "Cafe24Dangdanghae";
+
+}
+
+body {
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+}
