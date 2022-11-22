@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { fetchAPI } from '../utils/fetchAPI';
+import { Video, Loader } from './index';
+import { BsHeartFill } from 'react-icons/bs';
 
 const VideoConts = () => {
   const [videoDetail, setVideoDetail] = useState(null);
@@ -23,6 +25,8 @@ const VideoConts = () => {
   //   likeCount,
   // } = videoDetail;
 
+  if (!videos?.length) return <Loader />;
+
   return (
     <div className="vedioCont">
       <div className="video__play">
@@ -33,13 +37,26 @@ const VideoConts = () => {
             className="player"
           />
         </div>
-        <h2 className="video-title">이건 고양이인가 강아지인가</h2>
+        <div className="desc-cont">
+          <div className="video-channel">
+            <Link to={`/channel/${videoDetail.snippet.channelId}`}>
+              {videoDetail.snippet.channelTitle}
+            </Link>
+          </div>
+          <h2 className="video-title">{videoDetail.snippet.title}</h2>
+          <div className="count">
+            <div className="view">
+              조회수 : {videoDetail.statistics?.viewCount}회
+            </div>
+            <div className="like">
+              <BsHeartFill />
+              {videoDetail.statistics?.likeCount}
+            </div>
+          </div>
+        </div>
       </div>
       <section className="video__list">
-        <div className="box">
-          <div className="list-box"></div>
-          <div className="list-name"></div>
-        </div>
+        <Video videos={videos} layout="colums" />
       </section>
     </div>
   );

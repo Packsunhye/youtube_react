@@ -102,12 +102,13 @@
             }
         }
         .video-title {
-            margin-top: 30px;
+            margin-top: 20px;
             width: 100%;
-            background-color: rgb(255, 137, 137);
-            text-align: center;
-            height: 60px;
-            line-height: 60px;
+            text-align: left;
+            height: 36px;
+            font-size: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #fff;
         }
     }
     .video__list {
@@ -115,9 +116,76 @@
         padding-left: 15px;
         // background-color: #888;
         .box {
-            background-color: #fff;
             width: 100%;
             height: 100vh;
+            padding: 30px;
         }
     }
+
+    .videos__inner.colums {
+        margin-top: -20px;
+        display: flex;
+        flex-direction: column;
+        padding-right: 30px;
+
+        .box {
+            height: 43vh;
+            padding: 0;
+            margin-top: -50px;
+
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+
+            .titleName {
+                margin-top: -10px;
+            }
+        }
+    }
+}
+
+
+.channel__header {
+    height: 445px;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+.channel__info {
+    text-align: center;
+    img {
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+        border-radius: 50%;
+        margin-top: -150px;
+        border: 6px solid rgb(255, 255, 255);
+    }
+    h3 {
+        text-align: center;
+        font-family: var(--font-sub);
+        margin-top: 20px;
+    }
+
+    .staic-sub {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 15px;
+
+        > span {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: rgb(156, 156, 156);
+        }
+    }
+
+    
+}
+
+.channel__videos {
+    padding: 30px;
 }

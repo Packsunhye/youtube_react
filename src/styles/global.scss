@@ -28,3 +28,72 @@ body {
     background-color: var(--bg-dark);
     min-height: 100vh;
 }
+
+@media (max-width: 1470px) {
+    #main {
+        #aside {
+            button {
+                font-size: 14px;
+
+                span:first-child {
+                    display: inline-block;
+                    margin-right: 10px;
+                    vertical-align: -3px;
+                }
+
+                &:hover {
+                    background-color: var(--bg-dark-color) !important;
+                    transform: translateX(20px) !important;
+                    
+                }
+            }
+        }
+    }    
+}
+
+@media (max-width: 1305px) {
+    #main {
+        #aside {
+            button {
+                font-size: 14px;
+                padding: 8px 10px;
+
+                span:first-child {
+                    display: inline-block;
+                    margin-right: 5px;
+                    vertical-align: -3px;
+                }
+
+                &:hover {
+                    background-color: var(--bg-dark-color) !important;
+                    transform: translateX(20px) !important;
+                    
+                }
+            }
+        }
+    }    
+}
+
+@media (max-width: 1024px) {
+    #main {
+        #aside {
+            button {
+                text-align: left;
+                padding: 3px;
+                margin-bottom: 10px;
+
+                span:first-child {
+                    display: inline-block;
+                    margin-right: 5px;
+                    vertical-align: -3px;
+                }
+
+                &:hover {
+                    background-color: var(--bg-dark-color) !important;
+                    transform: translateX(20px) !important;
+                    
+                }
+            }
+        }
+    }    
+}

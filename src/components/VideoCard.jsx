@@ -9,11 +9,11 @@ const VideoCard = ({
 }) => {
   return (
     <div className="box">
-      <Link to={`./video/${videoId}`}>
+      <Link to={`/video/${videoId}`}>
         <img src={snippet?.thumbnails?.high?.url} alt={snippet?.title} />
       </Link>
       <div className="boxInfo">
-        <Link to={`./video/${videoId}`} className="titleName">
+        <Link to={`/video/${videoId}`} className="titleName">
           {snippet?.title.slice(0, 50)}
         </Link>
         <Link to={`/channel/${snippet.channelId}`} className="channelName">
