@@ -38,19 +38,21 @@ const VideoConts = () => {
           />
         </div>
         <div className="desc-cont">
-          <div className="video-channel">
-            <Link to={`/channel/${videoDetail.snippet.channelId}`}>
-              {videoDetail.snippet.channelTitle}
-            </Link>
-          </div>
           <h2 className="video-title">{videoDetail.snippet.title}</h2>
           <div className="count">
-            <div className="view">
-              조회수 : {videoDetail.statistics?.viewCount}회
+            <div className="video-channel">
+              <Link to={`/channel/${videoDetail.snippet.channelId}`}>
+                {videoDetail.snippet.channelTitle}
+              </Link>
             </div>
-            <div className="like">
-              <BsHeartFill />
-              {videoDetail.statistics?.likeCount}
+            <div className="sides">
+              <div className="view">
+                조회수 : {videoDetail.statistics?.viewCount}회
+              </div>
+              <div className="like">
+                <BsHeartFill />
+                {videoDetail.statistics?.likeCount}
+              </div>
             </div>
           </div>
         </div>

@@ -189,3 +189,140 @@
 .channel__videos {
     padding: 30px;
 }
+
+.desc-cont {
+    .count {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .video-channel {
+                
+            a {
+                font-size: 14px;
+                color: var(--bg-dark-color);
+
+            }
+        }
+
+        .sides {
+            display: flex;
+            width: 16%;
+            justify-content: space-between;
+            font-size: 14px;
+            color: rgb(156, 156, 156);
+
+            
+
+            .like {
+                > svg {
+                    margin-right: 10px;
+                    vertical-align: -3px;
+                }   
+            }
+        }
+    }
+}
+
+
+
+.search__inner {
+    margin-top: 85px;
+    display: flex;
+
+    #aside {
+        width: 17%;
+        min-height: 100vh;
+        border-right: 1px solid var(--bg-dark-border);
+        
+        padding: 20px;
+
+        button {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+            padding: 10px 20px;
+            border-radius: 30px;
+
+            span:first-child {
+                display: inline-block;
+                margin-right: 20px;
+                vertical-align: -3px;
+            }
+
+            &:hover {
+                background-color: var(--bg-dark-color) !important;
+                transform: translateX(40px) !important;
+                
+            }
+        }
+    }
+    .search__cont {
+        width: 83%;
+        padding: 30px;
+    
+        .result {
+            font-size: 18px;
+            >em {
+                font-size: 22px;
+                margin-right: 10px;
+                color: var(--bg-dark-sol);
+            }
+        }
+    
+        .sub {}
+    }
+}   
+
+.loder{
+    display: flex;
+    // height: 100vh;
+    padding-top: 210px;
+    justify-content: center;
+    align-items: center;
+    .loading {
+        $colors: #967eff, #a489f0, #5a46b4, #420fba, #370080;
+        display: flex;
+      
+        .dot {
+          position: relative;
+          width: 1.3em;
+          height: 1.3em;
+          margin: 0.6em;
+          border-radius: 50%;
+      
+          &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: inherit;
+            animation: wave 2s ease-out infinite;
+          }
+      
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              background: nth($colors, $i);
+      
+              &::before {
+                animation-delay: $i * 0.2s;
+              }
+            }
+          }
+        }
+      }
+      
+      @keyframes wave {
+        50%,
+        75% {
+          transform: scale(2.5);
+        }
+      
+        80%,
+        100% {
+          opacity: 0;
+        }
+      }
+}
